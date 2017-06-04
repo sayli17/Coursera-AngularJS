@@ -8,19 +8,22 @@
 
   function LunchCheckerController($scope){
     $scope.lunch = "";
-    $scope.message = "";
+    $scope.msg = "";
 
     $scope.calculateMessage = function(){
 
       if ($scope.lunch == '') {
-        $scope.message = "Please enter data first";
-      }else{
+        $scope.msg = "Please enter data first";
+      }
+      else{
         var a = $scope.lunch.split(",").length;
         if (a <= 3) {
-          $scope.message = "Enjoy!";
+          $scope.msg = "Enjoy!";
         }else if (a > 3) {
-          $scope.message = "Too much!";
-        }
+          $scope.msg = "Too much!";
+        };
+
+        
     }
 
     };
